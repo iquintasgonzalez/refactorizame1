@@ -1,4 +1,5 @@
 package refactorizar;
+import java.util.Scanner;
 
 /**
  * Lista los numeros primos de dos cifras
@@ -10,7 +11,7 @@ public class Refactorizar {
         boolean esPrimo = false;
         int longitudDigitos = 0;
         int contadorDigitos = 0;
-        longitudDigitos = 2;
+        longitudDigitos = entradaDato();
         if (longitudDigitos <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
@@ -60,6 +61,14 @@ public class Refactorizar {
                 }
             }
         }
+    }
+
+    private static int entradaDato() {
+        int longitudDigitos;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduzca un número entero entre 1 y 5: ");
+        longitudDigitos = sc.nextInt();
+        return longitudDigitos;
     }
 
 }
